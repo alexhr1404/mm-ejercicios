@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles/02-main.css" />
+		<script src="Scripts/hello_world.js"></script>
+		<style >
+			.botton{
+				font-family: "Trebuchet MS", sans-serif;
+				font-size: 0.9em;
+				display: inline-block;
+				width: 80px;
+				height: 30px;
+				border: 1px solid #c0c0c0;
+				padding: 10px, 20px;
+			}
+			#botton1{
+				background-color: darkred;
+
+			}
+			#botton2{
+				background-color: darkblue;
+			}
+			#botton3{
+				background-color: yellow;
+			}
+		</style>
+		
+	</head>
+	<body>
+<div id="botton1"class="botton" onclick="alert('Hello world')">Botton 1 </div>
+<div id="botton2" class ="botton"> Botton 2</div>
+<div id="botton3"class= "botton">Botton 3 </div>
+<script>
+			var boton2=document.getElementById('botton2');
+			boton2.addEventListener('click', ()=>{
+				boton2.innerText="Has clicado sobre mí";
+			})
+			var botones= document.querySelectAll('.botton');
+			for(i=0;i<botones.length;i++){
+			botones[i].addEventListener('mouseover',(e)=>{
+				e.target.style.backgroundcColor="black";
+
+
+			})
+			botones[i].addEventListener('mouseout'(e)=>{
+				e.target.style.backgroundcColor="";
+			})
+		}
+
+
+		</script>
+	</body>
+</html>
